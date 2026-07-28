@@ -1,10 +1,7 @@
 # LLM Fine-tuning: Qwen3 / Llama 3 with LoRA & QLoRA
-
-> 企业级可运行代码：LoRA / QLoRA / PEFT / Unsloth / SFT
-
 ## Why This Project
-
-大多数 AI 岗位候选人只会调用 API。这个项目展示你能够从零开始训练、调优和部署大语言模型——这正是 AI Engineer 的核心区分度。
+This project showcases your ability to train, fine-tune, and deploy large language models from scratch—the core differentiator for an AI Engineer.
+这个项目展示你能够从零开始训练、调优和部署大语言模型——这正是 AI Engineer 的核心区分度。
 
 ## Tech Stack
 
