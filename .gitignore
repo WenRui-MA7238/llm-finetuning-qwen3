@@ -1,0 +1,49 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+
+# Model outputs and checkpoints
+outputs/
+checkpoints/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# Data (allow small demo datasets)
+data/*.jsonl
+!data/alpaca_zh.jsonl
+data/*.csv
+data/*.parquet
+
+# Logs
+wandb/
+logs/
+*.log
+tensorboard/
+
+# Environment
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
