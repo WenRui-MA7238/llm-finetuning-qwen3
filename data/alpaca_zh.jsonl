@@ -1,0 +1,5 @@
+{"instruction": "解释什么是 LoRA 微调", "input": "", "output": "LoRA（Low-Rank Adaptation）是一种参数高效的微调方法。它冻结预训练模型的原始权重，只在注意力层和全连接层注入低秩矩阵 A 和 B 进行训练。这样可训练参数量通常不到原模型的 1%，显著降低显存占用和训练成本，同时保持接近全量微调的性能。"}
+{"instruction": "QLoRA 与 LoRA 有什么区别？", "input": "", "output": "QLoRA 在 LoRA 的基础上引入了 4-bit Normal Float 量化，将基础模型权重量化为 4-bit，并采用双重量化和分页优化器。它使得在消费级 GPU（如 24GB 显存）上也能微调 7B/13B 大模型，而 LoRA 通常需要更大的显存来加载 16-bit 基础模型。"}
+{"instruction": "将以下英文翻译成中文", "input": "Large language models can be fine-tuned for domain-specific tasks.", "output": "大语言模型可以针对特定领域任务进行微调。"}
+{"instruction": "什么是 SFT（监督微调）？", "input": "", "output": "SFT 是指使用标注好的指令-输出对继续训练预训练语言模型的过程。通过 SFT，模型学会遵循指令、保持一致的输出格式，并掌握特定任务风格。它是构建 ChatGPT 等对话模型的关键步骤之一。"}
+{"instruction": "描述 PEFT 库的作用", "input": "", "output": "PEFT（Parameter-Efficient Fine-Tuning）是 Hugging Face 推出的库，用于实现 LoRA、AdaLoRA、Prefix Tuning、Prompt Tuning 等参数高效微调方法。它允许开发者用少量可训练参数快速适配大模型，并与 Transformers 和 Accelerate 无缝集成。"}
