@@ -1,0 +1,37 @@
+# Unsloth Accelerated LoRA Config for Qwen3
+base_model: unsloth/Qwen3-8B
+
+# Dataset
+dataset_path: ./data/alpaca_zh.jsonl
+template: alpaca
+max_seq_length: 2048
+
+# Training - Unsloth allows much larger effective batch size
+batch_size: 2
+gradient_accumulation_steps: 4
+num_epochs: 1
+learning_rate: 2.0e-4
+warmup_ratio: 0.03
+lr_scheduler_type: linear
+weight_decay: 0.01
+
+# LoRA
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  use_rslora: true  # Rank-stabilized LoRA, better for large r
+
+# Output
+output_dir: ./outputs/qwen3_unsloth
+logging_steps: 10
+save_steps: 100
+save_total_limit: 2
